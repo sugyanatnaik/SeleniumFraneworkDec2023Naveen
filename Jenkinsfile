@@ -58,7 +58,7 @@ pipeline
             }
         }
         
-        stage('Publish Extent Report'){
+        stage('Publish Extent Report Sanity Dev'){
             steps{
                      publishHTML([allowMissing: false,
                                   alwaysLinkToLastBuild: false, 
@@ -106,7 +106,7 @@ pipeline
         }
         
         
-        stage('Publish Extent Report'){
+        stage('Publish Extent Report Regression QA'){
             steps{
                      publishHTML([allowMissing: false,
                                   alwaysLinkToLastBuild: false, 
