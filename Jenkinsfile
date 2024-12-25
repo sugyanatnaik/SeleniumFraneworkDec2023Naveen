@@ -44,7 +44,7 @@ pipeline
             }
         }
         
-        stage('Publish Allure Reports') {
+        stage('Publish Allure Reports Sanity Dev') {
            steps {
                 script {
                     allure([
@@ -91,7 +91,7 @@ pipeline
         }
                 
      
-        stage('Publish Allure Reports') {
+        stage('Publish Allure Reports Regression QA') {
            steps {
                 script {
                     allure([
@@ -134,7 +134,7 @@ pipeline
             }
         }
         
-      	stage('Publish Allure Reports') {
+      	stage('Publish Allure Reports Sanity Stage ') {
            steps {
                 script {
                     allure([
