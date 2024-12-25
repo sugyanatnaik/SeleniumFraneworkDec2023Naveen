@@ -21,4 +21,11 @@
 		</classes>
 	</test>
 
+	<test name="Registration Page Test - Sanity">
+	<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.qa.opencart.tests.RegistrationPageTest" />
+		</classes>
+	</test>
+
 </suite>
