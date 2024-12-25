@@ -124,4 +124,10 @@ pipeline
         
         
     }
+<<<<<<< HEAD:JenkinsFile
 }
+=======
+    
+    
+}
+>>>>>>> 9f1763c901d45f134e285507fccb2530142f0e10:Jenkinsfile
