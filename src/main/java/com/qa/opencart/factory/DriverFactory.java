@@ -6,16 +6,17 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -105,6 +106,7 @@ public class DriverFactory {
 	private void init_remoteDriver(String browserName) {
 
 		System.out.println("Running tests on Remote GRID on browser: " + browserName);
+		System.out.println("Hub URL is  :" + prop.getProperty("huburl"));
 
 		try {
 			switch (browserName.toLowerCase().trim()) {
@@ -122,6 +124,7 @@ public class DriverFactory {
 
 			case "edge":
 				tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getEdgeOptions()));
+//				tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), new EdgeOptions()));
 				break;
 
 			default:
@@ -201,7 +204,7 @@ public class DriverFactory {
 		File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);// temp directory
 		String path = System.getProperty("user.dir") + "/screenshot/" + methodName + "_" + System.currentTimeMillis()
 				+ ".png";
-		
+
 		File destination = new File(path);
 
 		try {

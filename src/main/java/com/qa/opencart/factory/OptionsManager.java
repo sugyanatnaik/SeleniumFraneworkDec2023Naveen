@@ -28,7 +28,7 @@ public class OptionsManager {
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setCapability("browserName", "chrome");
-			co.setBrowserVersion(prop.getProperty("browserversion").trim());
+//			co.setBrowserVersion(prop.getProperty("browserversion").trim());
 			Map<String, Object> selenoidOptions = new HashMap<>();
 			selenoidOptions.put("screenResolution", "1280x1024x24");
 			selenoidOptions.put("enableVNC", true);
@@ -52,8 +52,8 @@ public class OptionsManager {
 	public EdgeOptions getEdgeOptions() {
 		eo = new EdgeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
-			eo.setCapability("browserName", "edge");
-			eo.setCapability("platform", Platform.LINUX);
+//			eo.setCapability("browserName", "edge");
+//			eo.setCapability("platform", Platform.LINUX);
 		}
 		if (Boolean.parseBoolean(prop.getProperty("headless").trim())) {
 			System.out.println("Running edge in headless mode");
@@ -70,7 +70,7 @@ public class OptionsManager {
 		fo = new FirefoxOptions();
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setCapability("browserName", "firefox");
-			fo.setBrowserVersion(prop.getProperty("browserversion").trim());
+//			fo.setBrowserVersion(prop.getProperty("browserversion").trim());
 
 			Map<String, Object> selenoidOptions = new HashMap<>();
 			selenoidOptions.put("screenResolution", "1280x1024x24");

@@ -18,7 +18,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<extentreports-version>5.0.8</extentreports-version>
 		<aspectj.version>1.9.19</aspectj.version>
-		<selenium-version>4.18.1</selenium-version>
+		<selenium-version>4.27.0</selenium-version>
 	</properties>
 
 
@@ -134,8 +134,8 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-<!--						<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>-->
-						 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> 
+						<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
+<!--						 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 					</suiteXmlFiles>
 
 					<argLine>
