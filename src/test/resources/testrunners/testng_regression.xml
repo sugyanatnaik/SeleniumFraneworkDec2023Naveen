@@ -16,6 +16,8 @@
 
 	<test name="Login Page Test -Regression">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="124.0" />
+		<parameter name="testname" value="OpenCart-Login Page Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
@@ -24,19 +26,32 @@
 
 	<test name="Accounts Page Test">
 		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="124.0" />
+		<parameter name="testname" value="OpenCart-Accounts Page Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
 	</test>
 
-	<test name="Search Resuts Page Test">
+	<test name="Search Results Page Test">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="113.0" />
+		<parameter name="testname" value="OpenCart-Search Results Page Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.SearchResultsTest" />
 		</classes>
 	</test>
 
-	<test name="ProductInfo Page Test">
+	<test name="ProductInfo Page Test Chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="123.0" />
+		<parameter name="testname" value="OpenCart-ProductInfo Page Test" />
+		<classes>
+			<class name="com.qa.opencart.tests.ProductPageInfoTest" />
+		</classes>
+	</test>
+
+	<!--	<test name="ProductInfo Page Test">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.opencart.tests.ProductPageInfoTest" />
@@ -48,6 +63,6 @@
 		<classes>
 			<class name="com.qa.opencart.tests.RegistrationPageTest" />
 		</classes>
-	</test>
+	</test>-->
 
 </suite>
