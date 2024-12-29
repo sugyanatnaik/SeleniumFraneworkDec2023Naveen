@@ -14,7 +14,7 @@ services:
       - "./target:/opt/selenoid/video"
     environment:
       - "OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/target"
-    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-container-network", "selenoid"]
+    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-container-network", "selenoid", "-limit", "10"]
   selenoid-ui:
     image: "aerokube/selenoid-ui:latest"
     container_name: selenoid-ui
